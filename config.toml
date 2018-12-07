@@ -1,0 +1,27 @@
+baseURL = "http://blog.hawkes.info/"
+languageCode = "en-us"
+theme = "beautiful-writing"
+title = "Ivan Hawkes"
+themesDir = "../../themes"
+MetaDataFormat = "toml"
+DefaultContentLanguage = "en"
+Paginate = 10
+pygmentsCodeFences = true
+
+# Preserve special characters in taxonomy names ("Gérard Depardieu" vs "Gerard Depardieu")
+preserveTaxonomyNames = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = ""
+  description = ""
+  facebook = ""
+  twitter = "https://twitter.com/ivanhawkes"
+  instagram = ""
+  youtube = ""
+  github = ""
+  linkedin = ""
