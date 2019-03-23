@@ -3,9 +3,12 @@ type: post
 title: CRYENGINE 3.7 Source Control and Perforce
 date: 2015-05-01
 tags: ["CryEngine3","Git","Perforce","Source Control","SVN"]
+category: General
+image: /img/site/category/general.jpg
+author: "Ivan Hawkes"
 ---
 
-In this article I will try to cover the issue of source control, particularly for a CRYENGINE 3.7 project. I will touch on what it is, why you need it, and briefly on how to implement a decent source control system.
+In this article I will try to cover the issue of source control, particularly for a CRYENGINE 3.7 project. I will touch on what it is, why you need it, and briefly on how to implement a decent source control system.<!--more-->
 
 Let's start with the basics, what is source control and why do you need it?
 

@@ -3,9 +3,12 @@ type: post
 title: MediaWiki on the Beaglebone Black
 date: 2014-08-08
 tags: ["Beaglebone Black","LAMP","MediaWiki","Raspberry Pi"]
+category: general
+image: /img/site/category/general.jpg
+author: "Ivan Hawkes"
 ---
 
-There's been a lot of excitement over the past 2 years regarding the Raspberry Pi. The Pi is a wonderful piece of hardware / software with a great community behind it. I'm definitely a fan and would happily recommend one to a friend, but there's another player that is possibly even more exciting for the hardcore nerds - the BeagleBone Black (BB).
+There's been a lot of excitement over the past 2 years regarding the Raspberry Pi. The Pi is a wonderful piece of hardware / software with a great community behind it. I'm definitely a fan and would happily recommend one to a friend, but there's another player that is possibly even more exciting for the hardcore nerds - the BeagleBone Black (BB).<!--more-->
 
 While the Pi is a great teaching tool, and capable in it's own right, it is eclipsed by the BB. On paper they don't seem too different but there are a couple of small things that make the BB better suited to slightly heavier work loads like running a (very) small PHP web site.
 

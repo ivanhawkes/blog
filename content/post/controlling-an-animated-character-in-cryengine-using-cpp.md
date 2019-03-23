@@ -3,9 +3,15 @@ type: post
 title: Controlling an Animated Character in CRYENGINE using C++
 date: 2016-07-10
 tags: ["C++","Chrysalis","CryEngine3","Game Programming"]
+summary: "Controlling an Animated Character in CRYENGINE using C++"
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-Making an animated character move around the screen in CRYENGINE requires many thousands of lines of code and a lot of time and dedication. This series of articles will show you how to control a character animated in CRYENGINE Mannequin using C++ code. We will eventually cover the entire process from taking player input, through the movement controllers, into the character movement state machine, and finally passing the desired movement into the CAnimatedCharacter component. Side topics will include interacting with an orbit camera, items and inventory.
+Making an animated character move around the screen in CRYENGINE requires many thousands of lines of code and a lot of time and dedication. This series of articles will show you how to control a character animated in CRYENGINE Mannequin using C++ code.<!--more-->
+
+We will eventually cover the entire process from taking player input, through the movement controllers, into the character movement state machine, and finally passing the desired movement into the CAnimatedCharacter component. Side topics will include interacting with an orbit camera, items and inventory.
 
 Code will be provided as we progress. The code is liable to change over time, as this is based on a work in progress. You will be able to utilise this code as the basis for your own projects.
 

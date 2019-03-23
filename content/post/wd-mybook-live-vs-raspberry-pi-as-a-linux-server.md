@@ -3,9 +3,14 @@ type: post
 title: WD MyBook Live vs Raspberry Pi as a Linux Server
 date: 2014-03-24
 tags: ["Hardware","Linux","Low Power Devices","Raspberry Pi"]
+category: general
+image: /img/site/category/general.jpg
+author: "Ivan Hawkes"
 ---
 
-I've spent a lot of time in the last few months playing around with low power Linux based devices. As power becomes more expensive, and computers push out more heat and noise I find myself looking for ways to enjoy the comforts of always-on-service without paying the heat and noise toll. In this article I will contrast the [Raspberry Pi](http://www.raspberrypi.org/ "Raspberry Pi") with a [Western Digital MyBook Live](http://www.wdc.com/en/products/products.aspx?id=280 "WD MyBook Live") hard drive.
+I've spent a lot of time in the last few months playing around with low power Linux based devices. As power becomes more expensive, and computers push out more heat and noise I find myself looking for ways to enjoy the comforts of always-on-service without paying the heat and noise toll.<!--more-->
+
+In this article I will contrast the [Raspberry Pi](http://www.raspberrypi.org/ "Raspberry Pi") with a [Western Digital MyBook Live](http://www.wdc.com/en/products/products.aspx?id=280 "WD MyBook Live") hard drive.
 
 In the past I have run servers (2U rackmount Dell machines, re-purposed ancient hardware) within my own home, pulling large amounts of electricity and creating large amounts of heat and noise. I simply accepted at the time that if I wanted a certain level of service, I would need to pay the price.
 

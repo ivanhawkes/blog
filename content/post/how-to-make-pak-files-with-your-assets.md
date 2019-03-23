@@ -3,9 +3,14 @@ type: post
 title: How to Make .PAK Files With Your Assets
 date: 2013-07-25
 tags: ["Asset Management","CryEngine3","Games","Software Development"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+author: "Ivan Hawkes"
 ---
 
-Something that doesn't seem to receive much coverage is what to do with all your awesome assets once you've made your game. You're going to need to ship them to end users, and the best way is within a .PAK file. The tricky part is how to make those .PAK files.
+Something that doesn't seem to receive much coverage is what to do with all your awesome assets once you've made your game. You're going to need to ship them to end users, and the best way is within a .PAK file.<!--more-->
+
+The tricky part is how to make those .PAK files.
 
 There is already a .NET app that can do the packing for you, but I like things old school. I like scripts and I like to run on the bare metal with as much control as possible. The documentation mentions you can use the RC (resource compiler) to pack for consoles...but it alluded that you might be able to use it for more. I spent a few hours reading up about the resource compiler to see just what it could do. It turns out it can do everything you should need if you're willing to write a few XML files.
 

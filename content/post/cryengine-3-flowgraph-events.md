@@ -3,9 +3,14 @@ type: post
 title: CryEngine 3 - Flowgraph Events
 date: 2013-06-27
 tags: ["C#","CryEngine 3","Events","FlowGraph","Programming"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+author: "Ivan Hawkes"
 ---
 
-As you begin to learn how to program for CryEngine 3 you will run into a lot of barriers. The code is dense, filled with magic numbers, brimming with pre-processor code, macros, and templates and all sorts of traps. My only advice for this is to bear down and work through it. In time they will all start to make sense.
+As you begin to learn how to program for CryEngine 3 you will run into a lot of barriers. The code is dense, filled with magic numbers, brimming with pre-processor code, macros, and templates and all sorts of traps.
+
+<!--more--> My only advice for this is to bear down and work through it. In time they will all start to make sense.
 
 I'm currently working on producing my first few pieces of code that will provide a few useful features for the engine. I'm attempting to add a feeling of time and change in the form of days, seasons, tides and time of day parameters that are dynamic based on the current time of year. It's a fairly small set of additions but they should help to increase the dynamic feel of the world for the players.
 

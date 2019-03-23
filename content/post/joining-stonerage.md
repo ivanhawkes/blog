@@ -3,9 +3,14 @@ type: post
 title: Joining StoneRage
 date: 2013-09-02
 tags: ["CryEngine","CryEngine3","Games","software","StoneRage"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+author: "Ivan Hawkes"
 ---
 
-A few weeks ago I decided to place my own projects on hold and join a team working on a game - specifically the [StoneRage](http://mountainwheel.com/games/stonerage/ "StoneRage") game. The developers seemed organised and were well advanced in terms of graphic and environmental production. Better still, their code requirements would be a fairly close match to many of the things I will need to do to bring [Shattered Screens](http://www.shattered-screens.com "Shattered Screens") to completion. This provides me with a great opportunity to work on something fun, meet some new people, and get some learning / code written.
+A few weeks ago I decided to place my own projects on hold and join a team working on a game - specifically the [StoneRage](http://mountainwheel.com/games/stonerage/ "StoneRage") game. The developers seemed organised and were well advanced in terms of graphic and environmental production.<!--more-->
+
+Better still, their code requirements would be a fairly close match to many of the things I will need to do to bring [Shattered Screens](http://www.shattered-screens.com "Shattered Screens") to completion. This provides me with a great opportunity to work on something fun, meet some new people, and get some learning / code written.
 
 Now, learning the CryEngine is no easy feat for a programmer. There's approximately 220,000 lines of c++ code to peruse, and perhaps 40,000 more lines of LUA code - and that's not taking into account all the metadata that is stored inside XML documents. To make matters worse, the documentation is sparse and lacking in important details and there are very few useful tutorials on the subject. It's a large hill to climb.
 

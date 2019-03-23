@@ -3,9 +3,14 @@ type: post
 title: Google App Engine, Go and Go-RESTful
 date: 2013-10-19
 tags: ["Cloud Computing","Go","go-restful","Google App Engine","JSON","Language","REST","XML"]
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-I've spent the better part of a week now learning about a new suite of technologies which I am interested in using to develop my TMO gaming framework. The old guard of .NET, C#, T-SQL, ASP.NET and the three tier model feel decidedly out of date. They are cumbersome, slow and bulky at a time when we really need far more agility than previously.
+I've spent the better part of a week now learning about a new suite of technologies which I am interested in using to develop my TMO gaming framework.
+
+<!--more--> The old guard of .NET, C#, T-SQL, ASP.NET and the three tier model feel decidedly out of date. They are cumbersome, slow and bulky at a time when we really need far more agility than previously.
 
 After giving it some thought and study I've decided that the way forward is to use the [Google App Engine](https://developers.google.com/appengine/ "Google App Engine"), the shiny new language, [Go](http://golang.org/ "Go"), and the [Go-RESTfu](https://github.com/emicklei/go-restful "Go-RESTful")l framework. Here's my reasoning.
 

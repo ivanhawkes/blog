@@ -3,9 +3,12 @@ type: post
 title: Dealing With The Difficulty
 date: 2013-04-10
 tags: ["3ds max","CryEngine3","Games","Mudbox","Software Development","Terrain","world building","World Machine"]
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-I've been working on my pet project for almost five months now and I must admit that some parts of the project are easier than others. I don't actually get a choice about which parts I will try and deal with, but I do get a choice about the order in which it happens.
+I've been working on my pet project for almost five months now and I must admit that some parts of the project are easier than others. I don't actually get a choice about which parts I will try and deal with, but I do get a choice about the order in which it happens.<!--more-->
 
 A long time ago I learned the value of taking on the hard tasks first, the ones you don't want to do. There's no secret to how you handle this, simply pick a task out of the 'too hard' basket and work on it till you complete it. Rinse / repeat, and when all is said and done you will have completed your goals.
 

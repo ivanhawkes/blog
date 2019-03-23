@@ -3,9 +3,14 @@ type: post
 title: On Building a World
 date: 2013-03-25
 tags: ["Games","Terrain","world building"]
+category: World Design
+image: /img/site/category/world-design.jpg
+author: "Ivan Hawkes"
 ---
 
-To date I've been focusing on making my little zone with little regard for the world around it. Till now it's been acceptable to know just the prime locale of the zone, but it's been niggling at me that I don't know it's location on a world map, it's climate, or even the location of the sun. Apparently there is software out there that can build an entire world for you; and so, I finally bit the bullet and downloaded a copy of Fractal Terrains 3 and the mapping software Campaign Cartographer.
+To date I've been focusing on making my little zone with little regard for the world around it. Till now it's been acceptable to know just the prime locale of the zone, but it's been niggling at me that I don't know it's location on a world map, it's climate, or even the location of the sun.<!--more-->
+
+Apparently there is software out there that can build an entire world for you; and so, I finally bit the bullet and downloaded a copy of Fractal Terrains 3 and the mapping software Campaign Cartographer.
 
 Between the two packages I will be able to create a world, to give my locations a home, and work up some pretty nifty looking maps for them to boot.
 

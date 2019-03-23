@@ -3,9 +3,13 @@ type: post
 title: Creating Interesting Terrain
 date: 2013-02-23
 tags: ["Create","CryEngine","CryEngine3","Games","Mudbox","Photoshop","Software Development","Terrain","World Machine"]
+summary: Learning how to make terrain using World Machine and other tools.
+category: World Design
+image: /img/site/category/world-design.jpg
+author: "Ivan Hawkes"
 ---
 
-At first blush terrain might seem like a fairly easy thing to be able to create, and at it's simplest it might well be. Toss a few mountains about, some rolling hills, a valley or two, a little water, and you're done - or are you?
+At first blush terrain might seem like a fairly easy thing to be able to create, and at it's simplest it might well be. Toss a few mountains about, some rolling hills, a valley or two, a little water, and you're done - or are you?<!--more-->
 
 I've been working on creating terrain for several weeks now, and there's still more work coming. To be fair, a large amount of time was lost due to a pair of video cards that decided now was the time to slowly die. From there, I lost more time as I struggled to recover from my backups, due to the video card crashes getting violent enough to trash my boot partition. For extra fun I decided to purchase Acronis Backup, and watch in horror as two days later it completely failed to recover from another violent crash, my older backups having just been removed to make room for the Acronis ones. The joy was compounded by Autodesk deciding I had now used too many re-installations of my software and revoking my license.
 

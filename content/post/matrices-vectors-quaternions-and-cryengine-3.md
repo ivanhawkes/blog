@@ -3,9 +3,16 @@ type: post
 title: Matrices, Vectors, Quaternions and CryEngine 3
 date: 2014-06-21
 tags: ["CryEngine 3","CryEngine3","Mathematics","matrices","matrix","quaternions","Software Development","third person camera","vectors"]
+category: Math and Physics
+image: /img/site/category/physics.jpg
+author: "Ivan Hawkes"
 ---
 
-This article will introduce you to matrices, vectors and quaternions and how you can use them for programming games using the [CryEngine SDK](http://cryengine.com "CryEngine"). You will only need a basic understanding of mathematics, beginner level c++ and a general knowledge of the CryEngine SDK; in particular, the gamesdk.dll code which is written in c++. Example code will be taken from the work I am presently doing to implement various types of third person camera views. The code is stored in a Git repository on [BitBucket](https://bitbucket.org/ivanhawkes/plugin-camera "Plugin Camera Code").
+This article will introduce you to matrices, vectors and quaternions and how you can use them for programming games using the [CryEngine SDK](http://cryengine.com "CryEngine"). You will only need a basic understanding of mathematics, beginner level c++ and a general knowledge of the CryEngine SDK; in particular, the gamesdk.dll code which is written in c++.<!--more-->
+
+Example code will be taken from the work I am presently doing to implement various types of third person camera views.
+
+The code is stored in a Git repository on [BitBucket](https://bitbucket.org/ivanhawkes/plugin-camera "Plugin Camera Code").
 
 The article is not looking to be a comprehensive guide to matrics, vectors and quaternions, but rather introduce them in a way that is relevant to authors of 3D games.
 

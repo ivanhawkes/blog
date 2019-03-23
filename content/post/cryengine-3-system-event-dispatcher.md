@@ -3,9 +3,14 @@ type: post
 title: CryEngine 3 System Event Dispatcher
 date: 2014-03-15
 tags: ["CryEngine 3","CryEngine3","Dispatcher","event","listener","Software Development"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+author: "Ivan Hawkes"
 ---
 
-Earlier this week I wrote about CryEngine listener classes in a brief overview. I intimated that they are an excellent way to write code against the CryEngine SDK and today I want to go into more depth. I briefly covered the 40 odd listeners that I was able to locate in my article [Introducing CryEngine 3 Event Listeners](http://ivan.hawkes.info/2014/03/07/introducing-cryengine-3-event-listeners/ "Introducing CryEngine 3 Event Listeners"). Today I would like to revisit just one of those listeners, **ISystemEventListener**.
+Earlier this week I wrote about CryEngine listener classes in a brief overview. I intimated that they are an excellent way to write code against the CryEngine SDK and today I want to go into more depth.
+
+<!--more--> I briefly covered the 40 odd listeners that I was able to locate in my article [Introducing CryEngine 3 Event Listeners](http://ivan.hawkes.info/2014/03/07/introducing-cryengine-3-event-listeners/ "Introducing CryEngine 3 Event Listeners"). Today I would like to revisit just one of those listeners, **ISystemEventListener**.
 
 ## The Plugin SDK
 

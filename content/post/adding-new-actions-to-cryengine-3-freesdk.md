@@ -3,9 +3,12 @@ type: post
 title: Adding New Actions to CryEngine 3 FreeSDK
 date: 2013-12-09
 tags: ["C++","CryEngine3","Flowgraph","Software Development"]
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-This tutorial will help you add new actions into CryEngine 3 FreeSDK projects without needing to make any changes to the base code provided by CryTek.
+This tutorial will help you add new actions into CryEngine 3 FreeSDK projects without needing to make any changes to the base code provided by CryTek.<!--more-->
 
 Recently I went to add a new feature to my CryEngine 3 FreeSDK project. This feature needed to add new actions (camera zoom in and out), and it seemed at first it wasn't possible to add them without at least making some changes to Gameactions.actions and GameActions.cpp. It actually seemed to require a lot of changes to key parts of the code, and making these changes would make applying upgrades to the SDK much harder at a later date. I made a first pass at the problem, and the results were pretty ugly. There had to be a better way, and thanks to some guidance from older members, and sample code, I found that way.
 

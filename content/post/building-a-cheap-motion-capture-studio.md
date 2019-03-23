@@ -3,9 +3,15 @@ type: post
 title: Building A Cheap Motion Capture Studio
 date: 2013-07-16
 tags: ["CryEngine3","Development","Game","Games","Microsoft Kinect","Motion Capture","PS Eye Camera","Software Development"]
+summary: I bought up some cheap PS3 cameras and used iPi Software to make a fairly basic motion capture studio.
+category: general
+image: /img/site/category/general.jpg
+author: "Ivan Hawkes"
 ---
 
-A while back I became interested in motion capture as a means to easily get basic animations into the game I am working on. Using reasonably priced software from [Brekel](http://www.brekel.com/ "Brekel Software") and a cheap Microsoft [Xbox Kinect](http://en.wikipedia.org/wiki/Kinect "XBox Kinect") camera you have the beginnings of a motion capture setup. I've run a few experiments and the results are pretty decent for forward facing animations in a small area and at low speeds.
+A while back I became interested in motion capture as a means to easily get basic animations into the game I am working on. Using reasonably priced software from [Brekel](http://www.brekel.com/ "Brekel Software") and a cheap Microsoft [Xbox Kinect](http://en.wikipedia.org/wiki/Kinect "XBox Kinect") camera you have the beginnings of a motion capture setup.
+
+<!--more--> I've run a few experiments and the results are pretty decent for forward facing animations in a small area and at low speeds.
 
 It's cheap, easy to setup and effective enough for simple indie game development - and it can be improved upon without breaking most budgets.
 

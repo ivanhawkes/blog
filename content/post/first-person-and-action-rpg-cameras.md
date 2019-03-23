@@ -3,11 +3,15 @@ type: post
 title: First Person and Action RPG Cameras
 date: 2016-09-14
 tags: ["C#","C++","Camera Code","Chrysalis","CRYENGINE 5.2","Game Programming","Mathematics"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+summary: "Handling input and camera management."
+author: "Ivan Hawkes"
 ---
 
-# Camera Management in CRYENGINE
+In this article I will introduce you to view management within CRYENGINE and then use the existing view management to build a camera manager, a first person camera and a third person orbit camera (action RPG style).
 
-In this article I will introduce you to view management within CRYENGINE and then use the existing view management to build a camera manager, a first person camera and a third person orbit camera (action RPG style). The first person camera is simple enough, but the third person camera has a few nice features above and beyond the one available in the new c++ game templates from [CryTek](http://crytek.com/).
+<!--more--> The first person camera is simple enough, but the third person camera has a few nice features above and beyond the one available in the new c++ game templates from [CryTek](http://crytek.com/).
 
 The code will be available in my [GitHub repository](https://github.com/ivanhawkes/Chrysalis/tree/camera_code_article) with a tag specific to the code being discussed in the article. There's a lot of other things in there which you might want to poke through, but be aware it's a work in progress and is definitely not production ready.
 

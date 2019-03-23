@@ -3,9 +3,14 @@ type: post
 title: How I Learned to Love Go (Language) And Stop Worrying
 date: 2013-10-12
 tags: ["Go","go","Language","Languages","Ohio Scientific","software design","Software Development","Visual Basic"]
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-There's a new love in my life, and she's petite, versatile, responsive and modern - it's the language, [Go](http://golang.org/ "Go Language"). I'm still in the honeymoon stage, getting to know the ways she likes to play and the things she can do for me, but I can tell you now - it's going to be a long romance. But first, let's have a look back at the types I've been hanging out with in the past.
+There's a new love in my life, and she's petite, versatile, responsive and modern - it's the language, [Go](http://golang.org/ "Go Language"). I'm still in the honeymoon stage, getting to know the ways she likes to play and the things she can do for me, but I can tell you now - it's going to be a long romance.<!--more-->
+
+But first, let's have a look back at the types I've been hanging out with in the past.
 
 In the very early days I used [Microsoft BASIC](http://en.wikipedia.org/wiki/Microsoft_BASIC "Wikipedia - Microsoft BASIC") which shipped in the ROM of my very first PC, the [Ohio Scientific C1P - Challenger](http://en.wikipedia.org/wiki/Ohio_Scientific#Challenger "Ohio Scientific Challenger"). It wasn't too long before I was cranking out 6502 assembly code with a [line oriented editor](http://en.wikipedia.org/wiki/Line_editor "Line Oriented Editor") to push that machine to it's limits. Years passed and I moved out of home to attend [QUT University](http://www.qut.edu.au/ "Queensland University of Technology") and there I was introduced to, somewhat at gun point, first Pascal, then Modula II, and C. The cycle of pain was complete when I learnt C++ for a job.
 

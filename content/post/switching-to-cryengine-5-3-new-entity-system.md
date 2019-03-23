@@ -3,15 +3,21 @@ type: post
 title: Switching to CRYENGINE 5.3 New Entity System
 date: 2017-01-08
 tags: ["C++","Chrysalis","CRYENGINE 5.2","CRYENGINE 5.3","Game Programming"]
+summary: "Changing over the Chrysalis code to CRYENGINE 5.3."
+category: Programming
+image: /img/site/category/programming.jpg
+author: "Ivan Hawkes"
 ---
 
-In this article I will cover the changes I made to [**Chrysalis**](https://github.com/ivanhawkes/Chrysalis) for the release of CRYENGINE 5.3. Some were required due to old code being deprecated, others were simply improvements over the previous way of doing things. A lot revolved around the entity system, entity events, and game objects. I hope to reveal all the stupid mistakes I made as I went through the code, getting it to build again; a process that took me about 10 days part time. That's a long time to go without being able to run the resulting code, so I had to unwind a few things I'd expected might work, or because my understanding of them changed. Let's get started!
+In this article I will cover the changes I made to [**Chrysalis**](https://github.com/ivanhawkes/Chrysalis) for the release of CRYENGINE 5.3. Some were required due to old code being deprecated, others were simply improvements over the previous way of doing things.<!--more-->
+
+A lot revolved around the entity system, entity events, and game objects. I hope to reveal all the stupid mistakes I made as I went through the code, getting it to build again; a process that took me about 10 days part time. That's a long time to go without being able to run the resulting code, so I had to unwind a few things I'd expected might work, or because my understanding of them changed. Let's get started!
 
 The biggest changes that CRYENGINE 5.3 brought, at least in my opinion, were **Schematyc**, **plugins** and the re-factored **entity component system**. While Schematyc is open to the end user and adds some much needed extra functionality, the entity component changes are more subtle and unlikely to ever be noticed by end users or other teams members who aren't coders. I won't be covering Schematyc this time, because I haven't yet opened up my code to take advantage of this new feature; that will come in a later article. Instead, there's going to be a series of comments and observations on code changes related to the entity component system and plugins.
 
-I've bundled all of the code changes into a [single commit](https://github.com/ivanhawkes/Chrysalis/commit/6dbf1ff8b112165ad2e8e62d7f4babcd74cbad6a) on my [Github repository](https://github.com/ivanhawkes/Chrysalis/commit/6dbf1ff8b112165ad2e8e62d7f4babcd74cbad6a).
+I've bundled all of the code changes into a [single commit](https://github.com/ivanhawkes/Chrysalis/commit/6dbf1ff8b112165ad2e8e62d7f4babcd74cbad6a) on my [Github repository](https://github.com/ivanhawkes/).
 
-# Component Entity System Improvements
+## Component Entity System Improvements
 
 CRYENGINE technically already had a component entity system, but it was a mess, confusing, poorly documented and in need of a massive overhaul. It's gotten a lot of love this release.
 
@@ -142,7 +148,7 @@ CRYREGISTER_CLASS(CAnimatedDoorComponent)
 
 If you forget to add that to the class you will get link time errors. Each declared component needs just a little bit of code outside the class declaration in order to work. That macro supplies the code.
 
-# The Game is Now a Plugin
+## The Game is Now a Plugin
 
 CryTek is moving towards removal of all game-play specific code paths from the boilerplate you typically have to write. Plugins are the way forward, and since they have a common well defined interface it is simple enough for the game executable to look for and load all the plugins you require.
 
@@ -192,7 +198,7 @@ CChrysalisCorePlugin* CChrysalisCorePlugin::Get()
 
 I gave it a simple static cache to reduce queries on the plugin manager, since the address should not change. If hot-reloading comes in expect that code to break in weird and awful ways. I'll leave it in there as a present to my future self.
 
-# Deprecated Code
+## Deprecated Code
 
 I ran into a few issues early on, much of it was to do with deprecated code or code that will be abandoned or deprecated soon. For me the issues all focused around a few main areas:
 
@@ -275,7 +281,7 @@ auto cls = gEnv->pEntitySystem->GetClassRegistry()->FindClass("CameraManager");
 cls->SetFlags(cls->GetFlags() ' ECLF_INVISIBLE);
 ```
 
-# The Little Things
+## The Little Things
 
 Finally, we get to a few simple little issues. There were a few changes to the methods used to access some game pointers like the game framework pointer. A global search and replace will fix those for you.
 
@@ -285,7 +291,7 @@ Debug / auxiliary rendering access moved as well to a new location. Check <span 
 
 There's probably a ton of things I've forgotten to mention, but this should cover the major things at least.
 
-# Conclusion
+## Conclusion
 
 It took a lot of typing, cutting, and pasting to get most of the code up to the new standard. I like to think it's worth it and anyway there's no escaping the pain - you have to take it at some point if you want the sweet new candy. Most of the work was laborious and repetitive but beer helps solve that problem. The few big issues I did have - I have covered for you, and if the article is brief or lacking there's always the source code which is one big fat commit. It has a couple of other little bit of tidying up, but in general I cut things out rather than put anything in. I've tried to cover any pits I fell into so you can avoid them on your projects.
 

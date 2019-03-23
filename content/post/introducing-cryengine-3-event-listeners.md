@@ -3,9 +3,12 @@ type: post
 title: Introducing CryEngine 3 Event Listeners
 date: 2014-03-07
 tags: ["C#","CryEngine 3","CryEngine3","event","gamesdk.dll","listener","observer pattern","Software Development"]
+category: CRYENGINE
+image: /img/site/category/cryengine.jpg
+author: "Ivan Hawkes"
 ---
 
-In this article I will introduce you to event handling within CryEngine 3 and give a brief overview of the many listeners you can utilise within your project.
+In this article I will introduce you to event handling within CryEngine 3 and give a brief overview of the many listeners you can utilise within your project.<!--more-->
 
 Learning the CryEngine code can be daunting at first. It's large, non-trivial and complex. Approximately 220,000 lines of C++ are provided with the CryEngine FreeSDK, and much of that is densely packed  headers. A good first step is to purchase one or more of the books which introduce you to programming with the engine. I have personally read and can recommend:
 
