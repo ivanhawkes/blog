@@ -21,7 +21,7 @@ I've bundled all of the code changes into a [single commit](https://github.com/i
 
 CRYENGINE technically already had a component entity system, but it was a mess, confusing, poorly documented and in need of a massive overhaul. It's gotten a lot of love this release.
 
-Registration of the components now uses a 128 bit GUID instead of a simple string. Components can be added to entities using template functions, which is a much better and typesafe method. Components are now able to have their own set of properties which are exposed to the editor. It is even possible to have several components of the same class on an entity, though I have not yet tried this and it might be somewhat experimental still.
+Registration of the components now uses a 128 bit GUID instead of a simple string. Components can be added to entities using template functions, which is a much better and type-safe method. Components are now able to have their own set of properties which are exposed to the editor. It is even possible to have several components of the same class on an entity, though I have not yet tried this and it might be somewhat experimental still.
 
 Let's take a look at a simple case where an old game object piece of code is updated to be a shiny new **IEntityComponent**. The **AnimatedDoor** component is nice and simple and will do to illustrate the changes required. Scroll done the lengthy commit until you reach CAnimatedDoor.h.
 
@@ -163,11 +163,11 @@ If you check that codebase, you will see everything you need to get started with
 * Startup/GameStartup.h
 * Startup/GameStartup.cpp
 
-Those files contained startup, initialisation, and gameplay code. Large amounts of it was boilerplate, and plenty was full of esoteric junk required to get a DLL loaded and handling Windows messages. All that is gone now, replaced by the much shorter and cleaner code in GamePlugin.cpp and GamePlugin.h.
+Those files contained start-up, initialisation, and game-play code. Large amounts of it was boilerplate, and plenty was full of esoteric junk required to get a DLL loaded and handling Windows messages. All that is gone now, replaced by the much shorter and cleaner code in GamePlugin.cpp and GamePlugin.h.
 
 My code is pretty much just a copy of that code with some GUIDs and names changed, with one exception. I want to be able to make a static call on my **CChrysalisCorePlugin** to get at key features that are expected to be available at all times e.g. **cvars**. My first instinct was to define them as a struct internal to the **CChrysalisCorePlugin** and then have a member function return a reference to that struct. I had that all coded and was finally ready to test the project when something weird happened with the camera. It was spinning at some insane speed as I moved the mouse and was locked either pointing straight up or straight down. A little debugging revealed my code to query for the plugin was returning a pointer that was correctly cast, but was not actually pointing at an instance of the plugin - it was pointing at another plugin in a different DLL. You can imagine how totally safe it is to access what is essentially a random piece of memory. The cvar values were junk random data and goodness knows what would happen if I was writing to it. Actually the debugger refused to even show the values on most runs.
 
-Lucky Filip was on hand to answer some questions and offer some test options - one of which worked. The end result was I split the game features off into an interface, and the plugin features into a different class with a pointer to an instance of that interface. Then I applied a little band-aid to the declaration of the CChrysalisCorePlugin class - adding an extra line of code that shouldn't have been needed. It declares an interface for the class, which I would have expected to be done by the earlier calls to **CRYINTERFACE_BEGIN** and **CRYGENERATE_SINGLETONCLASS**. Adding **CRYINTERFACE_DECLARE (CChrysalisCorePlugin, 0x6CCC03C51C214ADA, 0x9F25AE9F5C644F68)** worked in giving it an interface that could be queried using the PluginManager.  Whether this is a bug, omission or oversight, it should be fixed in an upcoming version or at least it's use clarrified.
+Lucky Filip was on hand to answer some questions and offer some test options - one of which worked. The end result was I split the game features off into an interface, and the plugin features into a different class with a pointer to an instance of that interface. Then I applied a little band-aid to the declaration of the CChrysalisCorePlugin class - adding an extra line of code that shouldn't have been needed. It declares an interface for the class, which I would have expected to be done by the earlier calls to **CRYINTERFACE_BEGIN** and **CRYGENERATE_SINGLETONCLASS**. Adding **CRYINTERFACE_DECLARE (CChrysalisCorePlugin, 0x6CCC03C51C214ADA, 0x9F25AE9F5C644F68)** worked in giving it an interface that could be queried using the PluginManager.  Whether this is a bug, omission or oversight, it should be fixed in an upcoming version or at least it's use clarified.
 
 **ChrysalisCore.h** and **ChrysalisCore.cpp** are very straight-forward so I won't cover them.
 
@@ -220,7 +220,7 @@ I was using **PostUpdate** to accumulate all the player input for a game frame, 
 
 PostUpdate is now deprecated, so I simply moved the functions into **Update** and sucked up the fact that it would be inconsistent between entities. Because of the way I was returning data from the functions there is a single frame delay in any case and everything should still be consistent. I should look into doing it a bit better in the future, but it's working fine for now.
 
-**ReloadExtension** was simply retired. I only had it in a few places and it wasn't strictly needed, but was rather a left-over from when I was refactoring GameSDK code. I was able to just drop that code.
+**ReloadExtension** was simply retired. I only had it in a few places and it wasn't strictly needed, but was rather a left-over from when I was re-factoring GameSDK code. I was able to just drop that code.
 
 The C++ templates and perhaps GameZero had this piece of code that did useful things when a **eGFE_BecomeLocalPlayer** event arrived signalling this entity was the local player. I saw that code and grabbed it for my own, so when they retired that event I was forced to move that code elsewhere. I ended up moving it into the initialisation code as a temporary solution and making a check to see if that entity was the local player:
 
@@ -253,7 +253,7 @@ which works reliably. I can't remember what the issue was and it may be resolved
 
 The scuttlebutt about game rules is that they will be getting phased out in the future. That's not a big issue for me, since I have very little code there - except for one important thing - **OnClientConnect** which is called when a client connects to the game. This is true even of single player games and it's how I create a new actor for the player and enter it into the game, setting it as the entity for that channel Id.
 
-There wasn't any way around this, so I had to keep the present game rules. **GameRules.h** just needed a few obsolete functions removed from the code. In GameRules.cpp the registrator code needed an adjustment. Because the game rules are still an old fashioned game object I needed to ensure they were registered using code suitable for that.
+There wasn't any way around this, so I had to keep the present game rules. **GameRules.h** just needed a few obsolete functions removed from the code. In GameRules.cpp the registration code needed an adjustment. Because the game rules are still an old fashioned game object I needed to ensure they were registered using code suitable for that.
 
 ```cpp
 CChrysalisCorePlugin::RegisterEntityWithDefaultComponent<CGameRules>("GameRules");
@@ -265,7 +265,7 @@ The remain issues are all somewhat tangled together with each other. My player e
 
 **CPlayerInputComponent** needs to register to capture actions, and that requires a game object. The cameras need a game object to register and capture the views they create. **CPlayer** has a little kruft from **IActor**, which could be factored out, but it's on the same entity as the other game object extensions and so needed to remain a game object extension. This is because I needed to call **GetGameObject()->AcquireExtension** in order to instantiate the camera manager and player input extensions. If you use the newer methods then the **Init** and **PostInit** functions don't get called and I think the game object pointer is also left as null - which causes bad things to happen. Camera manager could have been a new **IEntityComponent** except it needs to make calls to **GetGameObject()->AcquireExtension** in order to create the cameras - which need their **PostInit** called.
 
-The simplest plan was simply to leave all the components / extensions on the player entity as old fashioned game object extensions until such a time as they can be refactored. I removed all the dependencies I could, but some cannot be removed.
+The simplest plan was simply to leave all the components / extensions on the player entity as old fashioned game object extensions until such a time as they can be re-factored. I removed all the dependencies I could, but some cannot be removed.
 
 I tested if I was able to create entity component interfaces for old style game objects and nothing broke, so I went and added some code to do this for each one in anticipation of the day they are freed from the game object system.
 
@@ -295,4 +295,4 @@ There's probably a ton of things I've forgotten to mention, but this should cove
 
 It took a lot of typing, cutting, and pasting to get most of the code up to the new standard. I like to think it's worth it and anyway there's no escaping the pain - you have to take it at some point if you want the sweet new candy. Most of the work was laborious and repetitive but beer helps solve that problem. The few big issues I did have - I have covered for you, and if the article is brief or lacking there's always the source code which is one big fat commit. It has a couple of other little bit of tidying up, but in general I cut things out rather than put anything in. I've tried to cover any pits I fell into so you can avoid them on your projects.
 
-Now comes the good part as I get to start refactoring everything into neat little components with their own properties. Good luck with your own efforts to convert to CRYENGINE 5.3!
+Now comes the good part as I get to start re-factoring everything into neat little components with their own properties. Good luck with your own efforts to convert to CRYENGINE 5.3!
