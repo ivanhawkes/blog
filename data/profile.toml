@@ -2,7 +2,7 @@ enable = "true"
 heading = "Profile"
 
 [[person]]
-	avatar ="/img/author/avatar.jpg"
+	avatar ="/img/author/ivan-hawkes.png"
 	name = "Ivan Hawkes"
 	profile = "ivan-hawkes"
 	position = "Lead Programmer"

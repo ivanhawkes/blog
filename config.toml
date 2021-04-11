@@ -26,7 +26,7 @@ preserveTaxonomyNames = true
   name = "Ivan Hawkes"
   description = "An ambivalent, disconnected, hermit with a fine love of irony and a wit like a Scottish Terrier - currently fulfilling all the clichés of a digital citizen."
   homepage = "http://hawkes.info/"
-  avatar = "/img/author/avatar.jpg"
+  avatar = "/img/author/ivan-hawkes.png"
 
 [params.copyright]
   year = "2018"
