@@ -3,7 +3,7 @@ title: "Chrysalis Update for 2020-08-02"
 date: 2020-08-02T21:48:08+10:00
 type: "post"
 tags: ["C++","Chrysalis", "CRYENGINE 5.6","Game Programming"]
-summary: "I cover recent progress on Chrysalis."
+description: "I cover recent progress on Chrysalis."
 category: Programming
 image: /img/site/category/programming.jpg
 author: "Ivan Hawkes"

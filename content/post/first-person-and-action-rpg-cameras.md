@@ -5,7 +5,7 @@ date: 2016-09-14
 tags: ["C#","C++","Camera Code","Chrysalis","CRYENGINE 5.2","Game Programming","Mathematics"]
 category: CRYENGINE
 image: /img/site/category/cryengine.jpg
-summary: "Handling input and camera management."
+description: "Handling input and camera management."
 author: "Ivan Hawkes"
 ---
 

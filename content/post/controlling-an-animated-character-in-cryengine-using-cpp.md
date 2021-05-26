@@ -3,7 +3,7 @@ type: post
 title: Controlling an Animated Character in CRYENGINE using C++
 date: 2016-07-10
 tags: ["C++","Chrysalis","CryEngine3","Game Programming"]
-summary: "Controlling an Animated Character in CRYENGINE using C++"
+description: "Controlling an Animated Character in CRYENGINE using C++"
 category: Programming
 image: /img/site/category/programming.jpg
 author: "Ivan Hawkes"

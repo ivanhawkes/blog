@@ -3,7 +3,7 @@ title: "Adding EnTT ECS to Chrysalis"
 date: 2019-12-31T22:48:08+10:00
 type: "post"
 tags: ["C++","Chrysalis", "CRYENGINE 5.6","Game Programming"]
-summary: "I discuss the process of adding EnTT ECS into Chrysalis."
+description: "I discuss the process of adding EnTT ECS into Chrysalis."
 category: Programming
 image: /img/site/category/programming.jpg
 author: "Ivan Hawkes"
